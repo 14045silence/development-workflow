@@ -8,10 +8,8 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-application/config/*
-!application/logs/index.html
-!application/config/database.php
-!application/logs/.htaccess
+application/config/database.php
+application/config/config.php
 
 composer.lock
 
