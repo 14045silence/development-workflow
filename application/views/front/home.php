@@ -14,25 +14,8 @@
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="images/favicon.ico">
-
-		<!-- Web Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
-
 		<!-- Bootstrap core CSS -->
-		<link href="<?= base_url() ?>asset/css/bootstrap.css" rel="stylesheet">
-
-		<!-- Font Awesome CSS -->
-		<link href="<?= base_url() ?>asset/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
-
-		<!-- Plugins -->
-		<link href="<?= base_url() ?>asset/css/animations.css" rel="stylesheet">
-
-		<!-- Worthy core CSS file -->
-		<link href="<?= base_url() ?>asset/css/style.css" rel="stylesheet">
-
-		<!-- Custom css --> 
-		<link href="<?= base_url() ?>asset/css/custom.css" rel="stylesheet">
+		<link href="<?= base_url() ?>asset/css/root.css" rel="stylesheet">
 	</head>
 
 	<body class="no-trans">
