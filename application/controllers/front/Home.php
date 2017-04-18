@@ -22,4 +22,8 @@ class Home extends My_Controller {
 			redirect(base_url());
 		}
 	}
+	function page(){
+		$data['body']="front/page";			
+		$this->load->view("template/front/core",$data);
+	}
 }

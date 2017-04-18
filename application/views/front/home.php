@@ -15,14 +15,7 @@
 	</head>
 
 	<body class="no-trans">
-		<!-- scrollToTop -->
-		<!-- ================ -->
-		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
-		<div class="loading" style="display: none">
-			
-		</div>
-		<!-- header start -->
-		<!-- ================ --> 
+		<div class="loading" style="display: none"></div>
 		<header class="header fixed clearfix navbar navbar-fixed-top">
 			<div class="container">
 				<div class="row">
@@ -81,6 +74,7 @@
 												<li><a href="#portfolio">Portfolio</a></li>
 												<li><a href="#clients">Clients</a></li>
 												<li><a href="#contact">Contact</a></li>
+												<li><a href="page">Course</a></li>
 											</ul>
 										</div>
 
