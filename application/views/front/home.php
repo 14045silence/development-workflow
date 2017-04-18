@@ -113,10 +113,11 @@
 							<p class="a-header-level-three text-center">
 								Ambil kesempatan untuk menggunakan Arkana di Sekolah/Kampusmu, berminat?
 							</p>
+							<br>
 							<p align="center">
 								<a href="#" id="open" class="btn btn-primary">Saya Berminat!</a> atau <a href="#contact" class="btn btn-warning">Kontak Kami!</a>
 							</p>	
-							
+							<br>
 							<span id="myform" style="display: none">
 								<div class="input-group">							      
 							      <input type="text" class="form-control" placeholder="Email">
