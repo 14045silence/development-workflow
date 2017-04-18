@@ -6,6 +6,7 @@ $route['login/super'] = 'admin/login';
 
 // FRONT
 $route['home'] = 'front/home';
+$route['submit'] = 'front/home/submit';
 
 // SCHOOL
 $route['login/sch'] = 'school/login';

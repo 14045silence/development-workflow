@@ -9,40 +9,11 @@ class My_Controller extends CI_Controller{
     public $get_lang="";
     function __construct(){
         parent::__construct();
-        $this->load->model('Menu','menu');
-        $this->load->model('Collection_model','collection');
-        //$this->load->model('Socmed_model','sosmed');
-        $this->load->model('Article','blog');
-        $this->load->model('User_model','Auth');
+        $this->load->model('User_model','user');
         $sesi=$this->session->userdata('user');
         if ($sesi==TRUE) {
-            if (!$this->Auth->isExist('id_user',$sesi)) {
-                $this->session->sess_destroy();
-                redirect(base_url());
-            }
-        }
-
-        // $ip = $this->input->ip_address();
-        // $this->db->insert('counting',array('ip' => "$ip", 'date' => date('Y-m-d')));
-
-        $this->load->helper('cookie');
-        $id=base_url(uri_string());
-        //$check_visitor = $this->input->cookie(urldecode($id), FALSE);
-        $ip = $this->input->ip_address();
-        // if ($check_visitor == false) {
-        //     $c = array(
-        //         "name" => base_url(uri_string()),
-        //         "value" => "$ip",
-        //         "expire" => time() + 7200,
-        //         "date_modified" => $this->timenow(),
-        //         "browser" => $this->getBrowser(),
-        //         );
-        //     $this->input->set_cookie($c);
-
             
-        //     $this->db->insert('counting',$c);          
-        // }
-        //$this->session->set_userdata('lang','id');
+        }
         $lang=$this->session->userdata('lang');
         if ($lang=="") {
             $lang='id';
@@ -61,10 +32,11 @@ class My_Controller extends CI_Controller{
     function unique(){
 
     }
+
     protected function _dir_img(){
       // local adi
       //return "http://localhost/src.moeblofurniture.com/uploads/";
-      return "http://localhost/moeblo/uploads/";
+      //return "http://localhost/moeblo/uploads/";
       //return "http://192.168.43.203/moeblo/uploads/";
       //return "https://src.moeblofurniture.com/uploads/";
     }
@@ -408,7 +380,7 @@ class My_Controller extends CI_Controller{
             //$this->session->set_flashdata('success', $msgsuccess);
             //redirect($redir);
         } else {
-            $this->redirect("Email not sent.");
+            //$this->redirect("Email not sent.");
         }
     }
 

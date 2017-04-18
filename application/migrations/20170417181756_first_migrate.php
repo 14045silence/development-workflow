@@ -22,22 +22,22 @@ class Migration_First_migrate extends CI_Migration
 			'role' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '100',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'nama' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'dob' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'password' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'gender' => array(
 				'type' => 'VARCHAR',
@@ -54,12 +54,12 @@ class Migration_First_migrate extends CI_Migration
 			'token_reg' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'token_forgot_pass' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'level' => array(
 				'type' => 'VARCHAR',
@@ -112,17 +112,17 @@ class Migration_First_migrate extends CI_Migration
 			'contact_person' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '100',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'email' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),			
 			'password' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),			
 			'update_at' => array(
 				'type' => 'TIMESTAMP',				
@@ -133,7 +133,7 @@ class Migration_First_migrate extends CI_Migration
 			'headmaster' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'pic' => array(
 				'type' => 'VARCHAR',
@@ -143,7 +143,7 @@ class Migration_First_migrate extends CI_Migration
 			'reg_number_ministry' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '200',
-				'null' => FALSE,
+				'null' => TRUE,
 				),
 			'token_reg' => array(
 				'type' => 'VARCHAR',

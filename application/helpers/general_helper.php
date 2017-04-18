@@ -10,9 +10,15 @@ if ( ! function_exists('test_method'))
         }
         throw new \Exception("Invalid number to format: $var");
     } 
+    function curtime(){
+        $no=date('Y-m-d-H-i-s');
+        list($y,$m,$d,$h,$i,$s)=explode('-', $no);
+        return $d."".$i."".$s;
+    }  
     function tanggal($var){
-        list($y,$m,$d)=explode('-', $var);
-        return $d."".$m."".$y;
+        $no=date('Y-m-d-H-i-s');
+        list($y,$m,$d,$h,$i,$s)=explode('-', $no);
+        return $d."".$m."".$s;
     }  
     function dates($param){
         list($tanggal,$jam)=explode(' ', $param);

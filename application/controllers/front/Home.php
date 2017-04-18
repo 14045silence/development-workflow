@@ -1,26 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends My_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct(){
+		parent::__construct();
+	}
+
 	public function index()
-	{
-		//$this->load->view('welcome_message');
+	{		
 		echo "Home";
+	}
+	function submit(){
+		if ($this->input("email")) {
+			$data['email']=$this->input('email');
+			$this->user->insert_normal();
+			$this->sendmailnored('Selamat datang di Arkana','Selamat datang di Arkana', $data['email'], 'Sukses coba');
+			echo json_encode($data);
+		}
+		else{
+			redirect(base_url());
+		}
 	}
 }

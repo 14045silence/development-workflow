@@ -11,13 +11,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="<?= base_url() ?>asset/images/ico_logo.png">		
 		<link href="<?= base_url() ?>asset/css/root.css" rel="stylesheet">
+		<script type="text/javascript" src="<?= base_url() ?>asset/plugins/jquery.min.js"></script>
 	</head>
 
 	<body class="no-trans">
 		<!-- scrollToTop -->
 		<!-- ================ -->
 		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
-
+		<div class="loading" style="display: none">
+			
+		</div>
 		<!-- header start -->
 		<!-- ================ --> 
 		<header class="header fixed clearfix navbar navbar-fixed-top">
@@ -120,7 +123,7 @@
 							<br>
 							<span id="myform" style="display: none">
 								<div class="input-group">							      
-							      <input type="text" class="form-control" placeholder="Email">
+							      <input type="text" class="form-control" placeholder="Email" id="u">
 							      <span class="input-group-btn">
 							        <button class="form-control btn btn-primary" type="button" id="register">Daftar Sekarang</button>
 							      </span>
@@ -1062,7 +1065,7 @@
 		<!-- JavaScript files placed at the end of the document so the pages load faster
 		================================================== -->
 		<!-- Jquery and Bootstap core js files -->
-		<script type="text/javascript" src="<?= base_url() ?>asset/plugins/jquery.min.js"></script>
+		
 		<script type="text/javascript" src="<?= base_url() ?>asset/js/bootstrap.min.js"></script>
 
 		<!-- Modernizr javascript -->
@@ -1090,7 +1093,31 @@
 	$("#open").click(function(){
 	    $("#myform").toggle();
 	});
-	$("#register").click(function(){	    
-	    $("#project-12").modal();
+	$(document).ready(function() {
+		$("#register").click(function(){	    
+		    var email = document.getElementById("u").value; 
+		    $.ajax({
+                    url : "<?php echo site_url('submit')?>",
+                    type: "POST",
+                    cache: false,
+                    data: 'email='+email,
+                    dataType: "JSON",
+                    beforeSend: function(){
+				        $('.loading').show();
+				    },
+				    complete: function(){
+				        $('.loading').hide();
+				    },
+                    success: function(response)
+                    {
+                    	$("#project-12").modal();  
+                    	$('#project-12').on('hidden.bs.modal', function () {
+						  window.location.reload();
+						});
+                    }
+                })
+
+		});
+		
 	});
 </script>
