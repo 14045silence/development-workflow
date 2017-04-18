@@ -5,16 +5,11 @@
 <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<title>Arkana </title>
+		<title>Arkana | The IoT pLatform</title>
 		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
 		<meta name="author" content="htmlcoder.me">
-
-		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="images/favicon.ico">
-		<!-- Bootstrap core CSS -->
+		<link rel="shortcut icon" href="<?= base_url() ?>asset/images/ico_logo.png">		
 		<link href="<?= base_url() ?>asset/css/root.css" rel="stylesheet">
 	</head>
 
@@ -36,13 +31,13 @@
 
 							<!-- logo -->
 							<div class="logo smooth-scroll">
-								<a href="#banner"><img id="logo" src="https://v.fastcdn.co/u/cc3de9ef/12739975-0-logo-color-transpara.png" alt="Worthy" width="60px"></a>
+								<a href="#banner"><img id="logo" src="<?= base_url() ?>asset/images/ico_logo.png" alt="Worthy" width="60px"></a>
 							</div>
 
 							<!-- name-and-slogan -->
 							<div class="site-name-and-slogan smooth-scroll">
 								<div class="site-name"><a href="#banner">Arkana</a></div>
-								<div class="site-slogan">IoT Platform <a target="_blank" href="http://htmlcoder.me">Arkana</a></div>
+								<div class="site-slogan">IoT Platform <a target="_blank" href="http://arkana.iot-platform.id/">Arkana</a></div>
 							</div>
 
 						</div>
@@ -104,14 +99,32 @@
 
 		<!-- banner start -->
 		<!-- ================ -->
-		<div id="banner" class="banner">
-			<div class="banner-image"></div>
-			<div class="banner-caption">
+		<div id="banner" class="banner" style="background-image: url('http://localhost/development-workflow/asset/images/banner.jpg')">
+			<div class="banner-image" ></div>
+			<div class="banner-caption" >
 				<div class="container">
 					<div class="row">
-						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
-							<h1 class="text-center">Jadilah Jagoan Internet of Things di Sekolahmu</h1>
-							<p class="lead text-center">Arkana adalah platform Internet of Things yang mempunyai misi untuk mendidik pelajar SMK/SMA dan mahasiswa agar menjadi ahli Internet of Things (IoT) di masa depan.</p>
+						<div class="col-md-10 col-md-offset-1 object-non-visible" data-animation-effect="fadeIn">
+							<p class="a-header text-center">Jadilah Jagoan Internet of Things di Sekolahmu</p>
+							<p class="a-header-level-two text-center"><span class="orange">Arkana</span> adalah platform Internet of Things yang mempunyai misi untuk mendidik pelajar SMK/SMA dan mahasiswa agar menjadi ahli Internet of Things (IoT) di masa depan.</p>
+							
+							<div class="line-orange"></div>
+
+							<p class="a-header-level-three text-center">
+								Ambil kesempatan untuk menggunakan Arkana di Sekolah/Kampusmu, berminat?
+							</p>
+							<p align="center">
+								<a href="#" id="open" class="btn btn-primary">Saya Berminat!</a> atau <a href="#contact" class="btn btn-warning">Kontak Kami!</a>
+							</p>	
+							
+							<span id="myform" style="display: none">
+								<div class="input-group">							      
+							      <input type="text" class="form-control" placeholder="Email">
+							      <span class="input-group-btn">
+							        <button class="form-control btn btn-primary" type="button" id="register">Daftar Sekarang</button>
+							      </span>
+							    </div>
+							</span>						
 						</div>
 					</div>
 				</div>
@@ -785,22 +798,19 @@
 								</div>
 								<!-- Modal -->
 								<div class="modal fade" id="project-12" tabindex="-1" role="dialog" aria-labelledby="project-12-label" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
+									<div class="modal-dialog modal-md">
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-												<h4 class="modal-title" id="project-12-label">Project Title</h4>
+												<h4 class="modal-title" id="project-12-label">Hore</h4>
 											</div>
 											<div class="modal-body">
-												<h3>Project Description</h3>
+												<!-- <h3>Project Description</h3> -->
 												<div class="row">
-													<div class="col-md-6">
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
-														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													<div class="col-md-12">
+														<p align="center">Please, check your email</p>
 													</div>
-													<div class="col-md-6">
-														<img src="<?= base_url() ?>asset/images/portfolio-12.jpg" alt="">
-													</div>
+													
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -1074,3 +1084,12 @@
 
 	</body>
 </html>
+
+<script type="text/javascript">
+	$("#open").click(function(){
+	    $("#myform").toggle();
+	});
+	$("#register").click(function(){	    
+	    $("#project-12").modal();
+	});
+</script>

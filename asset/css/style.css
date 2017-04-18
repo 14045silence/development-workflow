@@ -147,7 +147,7 @@ blockquote {
 }
 .banner-caption {
 	position: absolute;
-	top: 40%;
+	top: 30%;
 	width: 100%;
 	z-index: 2;
 }
@@ -492,6 +492,11 @@ textarea {
 		-ms-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
 	}
+	.a-header{
+		font-size: 35px;
+		font-weight: bold;
+		line-height: 1;
+	}
 }
 @media (min-width:768px) and (max-width:991px) {
 	.main-navigation .container-fluid {
@@ -501,10 +506,20 @@ textarea {
 	.navbar-nav {
 		float: left !important;
 	}
+	.a-header{
+		font-size: 35px;
+		font-weight: bold;
+		line-height: 1;
+	}
 }
 @media (max-width:767px) {
 	.header.navbar-fixed-top {
 		position: absolute;
+	}
+	.a-header{
+		font-size: 35px;
+		font-weight: bold;
+		line-height: 1;
 	}
 }
 
@@ -528,12 +543,22 @@ textarea {
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
+	.a-header{
+		font-size: 35px;
+		font-weight: bold;
+		line-height: 1;
+	}
 }
 @media (max-width:991px) {
 	.fixed-header-on .logo,
 	.fixed-header-on .site-name,
 	.fixed-header-on .site-slogan {
 		display: none;
+	}
+	.a-header{
+		font-size: 35px;
+		font-weight: bold;
+		line-height: 1;
 	}
 }
 
@@ -658,6 +683,11 @@ textarea {
 		width: 100%;
 		display: block;
 	}
+	.a-header{
+		font-size: 35px;
+		font-weight: bold;
+		line-height: 1;
+	}
 }
 
 /* Images Overlay
@@ -715,4 +745,25 @@ textarea {
 	filter: alpha(opacity=100);
 	-webkit-transform: scale(1);
 	transform: scale(1);
+}
+
+.a-header{
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 2;
+}
+
+.a-header-level-two{
+	font-size: 20px;
+	line-height: 1.5;
+}
+.orange{
+	color: #ff7f00;
+}
+.line-orange{
+	width: 20%;
+	height: 10px;
+	border-bottom: 2px solid #ff7f00;
+	margin: 0 auto;
+	margin-bottom: 20px;
 }

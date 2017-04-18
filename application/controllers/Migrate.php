@@ -10,7 +10,9 @@ class Migrate extends CI_Controller
        
         $this->load->library('migration');
     }
- 
+ 	function index(){
+ 		echo "Forbidden";
+ 	}
     public function version($version)
     {
         $migration = $this->migration->version($version);
